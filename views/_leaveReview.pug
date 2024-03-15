@@ -1,0 +1,34 @@
+section.add-review 
+    .login-form
+        h2.heading-secondary.ma-bt-lg Leave a review
+        form.form.review--form(data-ids=`${JSON.stringify( {user: user.id, tour: tour.id })}`)
+            .form__group
+                label.form__label(for='review') Review
+                input#review.form__input(type='text', required)
+            .form__group
+              label.form__label(for='rating') Rating(1-5)
+              div(style="display: flex;")
+                label
+                  input.form__input(type='radio', name='rating', id='rating1', value='1')
+                  span.button(style="font-size: 30px; margin-right: 10px; border: none; background: none; cursor: pointer;")
+                    span(style="color: #FFDD00;") 😡
+                label
+                  input.form__input(type='radio', name='rating', id='rating2', value='2')
+                  span.button(style="font-size: 30px; margin-right: 10px; border: none; background: none; cursor: pointer;")
+                    span(style="color: #FFDD00;") 😔
+                label
+                  input.form__input(type='radio', name='rating', id='rating3', value='3')
+                  span.button(style="font-size: 30px; margin-right: 10px; border: none; background: none; cursor: pointer;")
+                    span(style="color: #FFDD00;") 😟
+                label
+                  input.form__input(type='radio', name='rating', id='rating4', value='4')
+                  span.button(style="font-size: 30px; margin-right: 10px; border: none; background: none; cursor: pointer;")
+                    span(style="color: #FFDD00;") 😊
+                label
+                  input.form__input(type='radio', name='rating', id='rating5', value='5')
+                  span.button(style="font-size: 30px; margin-right: 10px; border: none; background: none; cursor: pointer;")
+                    span(style="color: #FFDD00;") 😀
+
+
+            .form__group
+                button.btn.btn--green Submit review
